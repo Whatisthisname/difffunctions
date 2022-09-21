@@ -54,19 +54,19 @@ class function:
         return function(lambda x: -self(x), lambda x: -self.d(x))
 
     def __radd__(self, other : "function"):
-        return other.__add__(self)
+        return self.__add__(other)
 
     def __rsub__(self, other : "function"):
-        return other.__sub__(self)
+        return self.__sub__(other)
 
     def __rmul__(self, other : "function"):
-        return other.__mul__(self)
+        return self.__mul__(other)
     
     def __rtruediv__(self, other : "function"):
-        return other.__truediv__(self)
+        return self.__truediv__(other)
 
     def __rpow__(self, other : "function"):
-        return other.__pow__(self)
+        return self.__pow__(other)
 
 x = function(lambda x: x, lambda x: 1)
 
@@ -74,3 +74,4 @@ sin = function(lambda x: math.sin(x), lambda x: math.cos(x))
 
 cos = function(lambda x: math.cos(x), lambda x: -math.sin(x))
 
+exp = function(lambda x: math.exp(x), lambda x: math.exp(x))

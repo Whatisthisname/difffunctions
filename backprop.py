@@ -1,16 +1,19 @@
-import difffunctions as df
+import difffunctions as dff
 
-# f(x) = sin(5x) - x^2
-f = df.sin(df.x * 5) + -df.x**2
+# f(x) = sin(2x) + sin(x)
+f = dff.sin(2 * dff.x**2) + dff.sin
+
+# g(x) = e^(f(x) + 1)
+g = dff.exp(f + 1)
+
+print(g(1))
 
 import matplotlib.pyplot as plt
 
 domain = [x/100 for x in range(-200, 200)]
-plt.plot(domain, [f(x) for x in domain])
+plt.plot(domain, [g(x) for x in domain])
 
-
-point = 1
-grad = f.d(point)
-plt.plot([point-1, point+1], [f(point)-grad, f(point) + grad])
-
+a = 1
+grad = g.d(a)
+plt.plot([a-1, a+1], [g(a)-grad, g(a) + grad])
 plt.show()
