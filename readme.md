@@ -1,4 +1,6 @@
-simple <100 lines library to automatically compute derivatives of functions in Python.
+teeny weeny library to automatically compute derivatives of functions in Python.
+
+This was made as a warm-up before implementing autodiff, but in hindsight I realize it didn't help.
 
 
 
