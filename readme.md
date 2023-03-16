@@ -7,7 +7,7 @@ This was made as a warm-up before implementing autodiff, but in hindsight I real
 ```python
 import difffunctions as dff
 
-# f(x) = sin(2x) + sin(x)
+# f(x) = sin(2x^2) + sin(x)
 f = dff.sin(2 * dff.x**2) + dff.sin
 
 # g(x) = e^(f(x) + 1)
